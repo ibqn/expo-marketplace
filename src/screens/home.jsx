@@ -1,12 +1,4 @@
-import {
-  StatusBar,
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  FlatList,
-} from 'react-native'
-import React from 'react'
+import { View, SafeAreaView, FlatList } from 'react-native'
 import { FocuesdStatusBar, HomeHeader, NFTCard } from '../components'
 import { COLORS, NFTData } from '../constants'
 
@@ -44,12 +36,3 @@ export const Home = () => {
     </SafeAreaView>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
