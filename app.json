@@ -2,7 +2,6 @@
   "expo": {
     "name": "expo-marketplace",
     "slug": "expo-marketplace",
-
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
