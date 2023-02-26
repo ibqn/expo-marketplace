@@ -2,6 +2,7 @@
   "expo": {
     "name": "expo-marketplace",
     "slug": "expo-marketplace",
+
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
@@ -23,6 +24,12 @@
     },
     "web": {
       "favicon": "./src/assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "089e059e-1e46-45b3-bb69-5c2b1defc19a"
+      }
+    },
+    "owner": "ibqn"
   }
 }
