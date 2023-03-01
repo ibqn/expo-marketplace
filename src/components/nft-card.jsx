@@ -33,7 +33,7 @@ export const NFTCard = ({ data }) => {
             borderTopRightRadius: SIZES.font,
           }}
         />
-        <CircleButton imgUrl={ASSETS.heart} right={10} top={10} />
+        <CircleButton imgUrl={ASSETS.heart} style={{ right: 10, top: 10 }} />
       </View>
 
       <SubInfo />

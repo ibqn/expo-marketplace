@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import { COLORS, SHADOWS, SIZES } from '../constants'
 
-export const CircleButton = ({ imgUrl, handlePress, ...otherStyles }) => {
+export const CircleButton = ({ imgUrl, handlePress, style }) => {
   return (
     <TouchableOpacity
       style={{
@@ -13,7 +13,7 @@ export const CircleButton = ({ imgUrl, handlePress, ...otherStyles }) => {
         alignItems: 'center',
         justifyContent: 'center',
         ...SHADOWS.light,
-        ...otherStyles,
+        ...style,
       }}
       onPress={handlePress}
     >
