@@ -1,7 +1,15 @@
-import { Image, Text, TextInput, View } from 'react-native'
+import { useState } from 'react'
+import { Image, Text, TextInput, View, TouchableOpacity } from 'react-native'
 import { ASSETS, COLORS, FONTS, SIZES } from '../constants'
 
 export const HomeHeader = ({ handleSearch }) => {
+  const [search, setSearch] = useState('')
+
+  const handleChangeText = (value) => {
+    setSearch(value)
+    handleSearch(value)
+  }
+
   return (
     <View
       style={{
@@ -82,8 +90,18 @@ export const HomeHeader = ({ handleSearch }) => {
             <TextInput
               placeholder="Search NFTs"
               style={{ flex: 1 }}
-              onChangeText={handleSearch}
+              value={search}
+              onChangeText={handleChangeText}
             />
+            {search && (
+              <TouchableOpacity onPress={() => handleChangeText('')}>
+                <Image
+                  source={ASSETS.clear}
+                  resizeMode="cover"
+                  style={{ width: 25, height: 20, marginLeft: SIZES.base }}
+                />
+              </TouchableOpacity>
+            )}
           </View>
         </View>
       </View>

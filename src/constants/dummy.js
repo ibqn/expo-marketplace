@@ -1,6 +1,6 @@
 import * as assets from './assets'
 
-const NFTData = [
+export const nftData = [
   {
     id: 'NFT-01',
     name: 'Abstracto #312',
@@ -190,5 +190,3 @@ const NFTData = [
     bids: [],
   },
 ]
-
-export { NFTData }

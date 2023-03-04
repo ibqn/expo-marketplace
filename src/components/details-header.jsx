@@ -4,6 +4,7 @@ import { CircleButton } from './circle-button'
 
 export const DetailsHeader = ({ data, navigation }) => {
   const { image } = data
+
   return (
     <View style={{ width: '100%', height: 373 }}>
       <Image
