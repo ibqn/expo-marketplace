@@ -7,10 +7,12 @@ import {
   SubInfo,
 } from '../components'
 import { RectButton } from '../components/rect-button'
-import { SHADOWS, SIZES } from '../constants'
+import { COLORS, FONTS, SHADOWS, SIZES } from '../constants'
 
 export const Details = ({ route, navigation }) => {
   const { data } = route.params
+
+  const bidsCount = data.bids.length
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -50,6 +52,18 @@ export const Details = ({ route, navigation }) => {
 
             <View style={{ padding: SIZES.font }}>
               <DetailsDescription data={data} />
+
+              {bidsCount > 0 && (
+                <Text
+                  style={{
+                    fontSize: SIZES.font,
+                    fontFamily: FONTS.semiBold,
+                    color: COLORS.primary,
+                  }}
+                >
+                  Current Bid{bidsCount > 1 && 's'}
+                </Text>
+              )}
             </View>
           </>
         )}
