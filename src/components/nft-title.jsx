@@ -1,13 +1,18 @@
 import { View, Text } from 'react-native'
-import { COLORS, FONTS, SHADOWS, SIZES } from '../constants'
+import { COLORS, FONTS, SIZES } from '../constants'
 
-export const NFTTitle = ({ title, subTitle }) => {
+export const NFTTitle = ({
+  title,
+  subTitle,
+  titleSize = SIZES.large,
+  subTitleSize = SIZES.small,
+}) => {
   return (
     <View>
       <Text
         style={{
           fontFamily: FONTS.semiBold,
-          fontSize: SIZES.large,
+          fontSize: titleSize,
           color: COLORS.primary,
         }}
       >
@@ -17,7 +22,7 @@ export const NFTTitle = ({ title, subTitle }) => {
       <Text
         style={{
           fontFamily: FONTS.semiBold,
-          fontSize: SIZES.small,
+          fontSize: subTitleSize,
           color: COLORS.primary,
         }}
       >

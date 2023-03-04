@@ -49,7 +49,7 @@ export const Details = ({ route, navigation }) => {
             <SubInfo />
 
             <View style={{ padding: SIZES.font }}>
-              <DetailsDescription />
+              <DetailsDescription data={data} />
             </View>
           </>
         )}
